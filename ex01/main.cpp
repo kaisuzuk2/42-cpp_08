@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 14:33:11 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2026/02/25 15:22:55 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:45:41 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,8 +119,7 @@ int main()
         header(6, "duplicate number");
         Span sp = Span(5);
         int arr[] = {42, 10, 42, 20, 30};
-        std::vector<int> v(arr, arr + 5);
-        sp.addNumber(v.begin(), v.end());
+        sp.addNumber(arr, arr + 5);
         std::cout << "Shortest: " << sp.shortestSpan() << std::endl; // expect 0
     }
     
