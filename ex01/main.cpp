@@ -6,13 +6,14 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 14:33:11 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2026/02/25 14:59:36 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:22:55 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
 #include <algorithm>
 #include "Span.hpp"
 #include "Span.tpp"
@@ -112,5 +113,31 @@ int main()
         } catch (std::exception &e) {
             std::cout << e.what() << std::endl;
         }
+    }
+
+    {
+        header(6, "duplicate number");
+        Span sp = Span(5);
+        int arr[] = {42, 10, 42, 20, 30};
+        std::vector<int> v(arr, arr + 5);
+        sp.addNumber(v.begin(), v.end());
+        std::cout << "Shortest: " << sp.shortestSpan() << std::endl; // expect 0
+    }
+    
+    {
+        header(7, "minus test");
+        Span sp = Span(2);
+        sp.addNumber(10);
+        sp.addNumber(-10);
+        std::cout << "Shortest: "<< sp.shortestSpan() << std::endl; // expect 20
+    }
+
+    {
+        header(8, "limits test");
+        Span sp = Span(2);
+        sp.addNumber(std::numeric_limits<int>::max());
+        sp.addNumber(-std::numeric_limits<int>::max());
+        std::cout << "Shortest: " << sp.shortestSpan() << std::endl;
+        std::cout << "Longest: " << sp.longestSpan() << std::endl;
     }
 }

@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 13:12:11 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2026/02/25 14:57:56 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2026/02/25 15:17:09 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ class Span {
         Span &operator=(const Span &);
         ~Span();
         void addNumber(int);
-        int shortestSpan() const;
-        int longestSpan() const;
+        long int shortestSpan() const;
+        long int longestSpan() const;
         template <typename It> void addNumber(It first, It last);
 };
 
