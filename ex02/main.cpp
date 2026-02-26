@@ -6,11 +6,12 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 09:53:33 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2026/02/26 10:21:04 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2026/02/26 10:47:58 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <list>
 #include "MutantStack.hpp"
 #include "MutantStack.tpp"
 
@@ -99,5 +100,27 @@ int main()
 		MutantStack<int>::const_reverse_iterator crit = cmstack.crbegin();
 		MutantStack<int>::const_reverse_iterator crite = cmstack.crend();
 		printStack(crit, crite);
+	}
+
+	{
+		header(5, "compair test");
+		MutantStack<int> mstack;
+		std::list<int> list;
+
+		for (int i = 0; i < 10; i++) {
+			mstack.push(i);
+			list.push_back(i);
+		}
+
+		MutantStack<int>::iterator sit = mstack.begin();
+		MutantStack<int>::iterator site = mstack.end();
+
+		std::list<int>::iterator lit = list.begin();
+		std::list<int>::iterator lite = list.end();
+
+		std::cout << "mstack: ";
+		printStack(sit, site);
+		std::cout << "list: ";
+		printStack(lit, lite);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 07:47:08 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2026/02/26 10:21:57 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2026/02/26 10:40:46 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,35 +36,35 @@ typename MutantStack<T>::iterator MutantStack<T>::begin() {
 
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::end() {
-	return (std::stack<T>::c.end());
+	return (this->c.end());
 }
 
 template <typename T>
 typename MutantStack<T>::const_iterator MutantStack<T>::cbegin() const {
-	return (std::stack<T>::c.begin());
+	return (this->c.begin());
 }
 
 template <typename T>
 typename MutantStack<T>::const_iterator MutantStack<T>::cend() const {
-	return (std::stack<T>::c.end());
+	return (this->c.end());
 }
 
 template <typename T>
 typename MutantStack<T>::reverse_iterator MutantStack<T>::rbegin() {
-	return (std::stack<T>::c.rbegin());
+	return (this->c.rbegin());
 }
 
 template <typename T>
 typename MutantStack<T>::reverse_iterator MutantStack<T>::rend() {
-	return (std::stack<T>::c.rend());
+	return (this->c.rend());
 }
 
 template <typename T>
 typename MutantStack<T>::const_reverse_iterator MutantStack<T>::crbegin() const {
-	return (std::stack<T>::c.rbegin());
+	return (this->c.rbegin());
 }
 
 template <typename T>
 typename MutantStack<T>::const_reverse_iterator MutantStack<T>::crend() const {
-	return (std::stack<T>::c.rend());
+	return (this->c.rend());
 }
