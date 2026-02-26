@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 13:12:11 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2026/02/25 15:17:09 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2026/02/26 07:42:28 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define SPAN_HPP
 
 #include <vector>
+#include <cstddef>
+#include <algorithm>
 #include "FullException.hpp"
 #include "NoSpanException.hpp"
 
